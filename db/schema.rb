@@ -27,11 +27,11 @@ ActiveRecord::Schema.define(version: 2019_07_03_071359) do
   end
 
   create_table "photos", force: :cascade do |t|
-    t.text "caption"
-    t.integer "place_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "picture"
+      t.text "caption"
+      t.integer "place_id"
+      t.datetime "created_at", null: false
+      t.datetime "updated_at", null: false
+      t.string "picture"
   end
 
   create_table "pictures", force: :cascade do |t|
