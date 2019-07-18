@@ -1,20 +1,11 @@
 
 <div class="booyah-box col-10 offset-1">
-  <div class="photo">
-    <% @place.photos.each do |photo| %>
-    <%= image_tag photo.picture.url%>
-    <% end %>
-  </div>
-  <div class="cap">
-    <% @place.photos.each do |photo| %>
-      <%= photo.caption %>
-    <% end %>
-  </div>
   
   <h1><%= @place.name %></h1>
   <i><%= @place.address %></i>
   <br/><br/>
   <p><%= @place.description %></p>
+  
 
   <% if @place.latitude.present? && @place.longitude.present? %>
   
@@ -95,6 +86,16 @@
 
   <div class="clear"></div>
     
+  <div class="photo">
+    <% @place.photos.each do |photo| %>
+    <%= image_tag photo.picture.url%>
+    <% end %>
+  </div>
+  <div class="cap">
+    <% @place.photos.each do |photo| %>
+      <%= photo.caption %>
+    <% end %>
+  </div>
     
     <!-- Button trigger modal -->
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal">
